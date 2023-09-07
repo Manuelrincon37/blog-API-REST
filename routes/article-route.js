@@ -21,13 +21,13 @@ router.get("/ruta-de-prueba", ArticleControler.test);
 router.get("/curso", ArticleControler.curso);
 
 //Ruta util(POST)
-router.post("/crear", ArticleControler.create)
-router.get("/articulos/:ultimos?", ArticleControler.listArticles)
-router.get("/articulo/:id?", ArticleControler.showOne)
-router.delete("/articulo/:id?", ArticleControler.deleteArticle)
-router.put("/articulo/:id?", ArticleControler.edit)
-router.post("/subir-imagen/:id", [upload.single("file0")], ArticleControler.uploadImg);
-router.get("/imagen/:imageFile", ArticleControler.image)
-router.get("/buscar/:busqueda", ArticleControler.find)
+router.post("/create", ArticleControler.create)
+router.get("/articles/:last?", ArticleControler.listArticles)
+router.get("/article/:id?", ArticleControler.showOne)
+router.delete("/article/:id?", ArticleControler.deleteArticle)
+router.put("/edit-article/:id?", ArticleControler.edit)
+router.post("/upload-img/:id", [upload.single("file0")], ArticleControler.uploadImg);
+router.get("/img/:imageFile", ArticleControler.image)
+router.get("/search/:busqueda", ArticleControler.find)
 
 module.exports = router;
